@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>Aktivoinnit kotona</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF0E4; --surface:#F9FAF3; --ink:#1E2A22; --muted:#56625A;
+  --line:#CBD1BE; --accent:#B97A2E; --accent-ink:#FFFFFF;
+  --dog:#C68A47; --ridge:#7A4A1C; --prop:#4E6B55; --soft:#DDE3D0;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#151C17; --surface:#1F2821; --ink:#E7EBDD; --muted:#A3AD9F;
+    --line:#35423A; --accent:#D99A4E; --accent-ink:#1A130A;
+    --dog:#D09A5C; --ridge:#8E5A2A; --prop:#8FB396; --soft:#2A352D;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#151C17; --surface:#1F2821; --ink:#E7EBDD; --muted:#A3AD9F;
+  --line:#35423A; --accent:#D99A4E; --accent-ink:#1A130A;
+  --dog:#D09A5C; --ridge:#8E5A2A; --prop:#8FB396; --soft:#2A352D;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:1.0625rem;line-height:1.5}
+.wrap{max-width:60rem;margin:0 auto;padding:1.25rem 1rem 3rem}
+h1,h2,h3{font-family:"Bricolage Grotesque","Atkinson Hyperlegible",system-ui,sans-serif;line-height:1.1;margin:0}
+h1{font-size:clamp(2.4rem,9vw,4rem);font-weight:800;letter-spacing:-.02em}
+.lede{color:var(--muted);margin:.5rem 0 1.25rem;max-width:34rem}
+.picker{background:var(--surface);border:1px solid var(--line);border-radius:1.25rem;padding:1rem}
+.row{margin-bottom:.9rem}
+.row-label{font-weight:700;font-size:.95rem;margin-bottom:.4rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.chip{font:inherit;font-size:.95rem;border:1.5px solid var(--line);background:transparent;color:var(--ink);
+  padding:.45rem .85rem;border-radius:999px;cursor:pointer;min-height:2.5rem}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tired{display:flex;align-items:center;gap:.6rem;font-weight:700;cursor:pointer;min-height:2.5rem}
+.tired input{width:1.4rem;height:1.4rem;accent-color:var(--accent)}
+.go{width:100%;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:1.35rem;
+  background:var(--accent);color:var(--accent-ink);border:0;border-radius:1rem;padding:1rem;cursor:pointer;margin-top:.25rem}
+.go:active{transform:translateY(1px)}
+.count{color:var(--muted);font-size:.9rem;margin-top:.5rem;text-align:center}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:1rem;margin-top:1.5rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:1rem;overflow:hidden;display:flex;flex-direction:column}
+.card.hit{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent)}
+.art{background:var(--soft);display:block;width:100%;height:auto}
+.card-body{padding:.85rem 1rem 1rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.card h3{font-size:1.4rem;font-weight:800}
+.meta{display:flex;flex-wrap:wrap;gap:.35rem;font-size:.85rem}
+.tag{background:var(--soft);padding:.15rem .55rem;border-radius:.4rem}
+.tag.easy{background:var(--accent);color:var(--accent-ink)}
+.gear{color:var(--muted);font-size:.95rem;margin:0}
+details summary{cursor:pointer;font-weight:700;padding:.35rem 0;min-height:2.25rem;display:flex;align-items:center}
+ol{margin:.25rem 0 .5rem;padding-left:1.3rem}
+ol li{margin-bottom:.3rem}
+.tip{border-left:4px solid var(--accent);padding:.25rem 0 .25rem .7rem;margin:.25rem 0 0;font-size:.95rem}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:2rem 1rem}
+
+.rules{margin-top:2.5rem;background:var(--surface);border:1px solid var(--line);border-radius:1.25rem;padding:1.1rem 1.1rem .4rem}
+.rules h2{font-size:1.6rem;font-weight:800;margin-bottom:.6rem}
+.rules ul{padding-left:1.2rem;margin:0 0 .8rem}
+.rules li{margin-bottom:.5rem}
+@media (prefers-reduced-motion:no-preference){ .card.hit{transition:box-shadow .3s} }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>Mitä tänään?</h1>
+  <p class="lede">Valitse, paljonko on aikaa ja virtaa, ja arvo tehtävä. Kaikki tehtävät toimivat sisällä.</p>
+
+  <section class="picker" aria-label="Valinnat">
+    <div class="row">
+      <div class="row-label" id="l-time">Aikaa</div>
+      <div class="chips" role="group" aria-labelledby="l-time" id="time">
+        <button class="chip" data-v="99" aria-pressed="true">Mitä vain</button>
+        <button class="chip" data-v="5" aria-pressed="false">5 min</button>
+        <button class="chip" data-v="10" aria-pressed="false">10 min</button>
+        <button class="chip" data-v="20" aria-pressed="false">20 min</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="row-label" id="l-type">Tyyppi</div>
+      <div class="chips" role="group" aria-labelledby="l-type" id="type">
+        <button class="chip" data-v="all" aria-pressed="true">Kaikki</button>
+        <button class="chip" data-v="nena" aria-pressed="false">Nenätyö</button>
+        <button class="chip" data-v="paa" aria-pressed="false">Ajattelu</button>
+        <button class="chip" data-v="rauha" aria-pressed="false">Rauhoittuminen</button>
+        <button class="chip" data-v="leikki" aria-pressed="false">Leikki</button>
+      </div>
+    </div>
+    <div class="row">
+      <label class="tired"><input type="checkbox" id="tired"> Olen väsynyt – vain helpot</label>
+    </div>
+    <button class="go" id="go">Arvo tehtävä</button>
+    <div class="count" id="count"></div>
+  </section>
+
+  <section class="list" id="list" aria-live="polite"></section>
+
+  <section class="rules">
+    <h2>Pelisäännöt</h2>
+    <ul>
+      <li>Ota nappulat päivän ruoka-annoksesta. Herkkä vatsa ei kaipaa ylimääräisiä herkkuja, ja paino pysyy kurissa.</li>
+      <li>10–15 minuuttia keskittynyttä nuuskutusta tai ajattelua riittää usein. Lopeta, kun koira on vielä innoissaan.</li>
+      <li>Ridgeback kyllästyy toistoon. Vaihda tehtävää, äläkä jauha samaa 20 kertaa.</li>
+      <li>Illalla valitse nenätyötä tai rauhoittumista, ei vetoleikkiä. Kierrokset nousevat helposti ja uni kärsii.</li>
+      <li>Ei hyppyjä, äkkikäännöksiä eikä liukkaita lattioita. Iso koira, kuuden vuoden nivelet.</li>
+      <li>Aktivointi täydentää lenkkejä ja vapaata juoksua, ei korvaa niitä.</li>
+    </ul>
+  </section>
+</main>
+
+<script>
+const T={nena:"Nenätyö",paa:"Ajattelu",rauha:"Rauhoittuminen",leikki:"Leikki"};
+const A=[
+ {id:"etsi",t:"Etsi!",ty:"nena",m:10,e:1,p:"scatter",g:"Kourallinen nappuloita",
+  s:["Koira odottaa paikalla tai toisessa huoneessa.","Piilota nappulat matalalle: maton reunaan, tuolinjalan taakse, oven taakse.","Päästä koira ja sano ”Etsi!”.","Seuraavalla kerralla vaikeammin: korkeammalle tai laatikoiden sisään."],
+  tip:"Aloita näkyvistä piiloista, ettei koira turhaudu ja luovuta."},
+ {id:"kupit",t:"Kuppipeli",ty:"nena",m:5,e:2,p:"cups",g:"3 mukia tai jogurttipurkkia, nappuloita",
+  s:["Nappula yhden kupin alle koiran nähden.","Sekoita kupit hitaasti.","Koira osoittaa kuonolla tai tassulla, sinä nostat kupin.","Väärästä valinnasta ei mitään, uusi kierros."],
+  tip:"6–8 kierrosta riittää. Ridgebackilta loppuu kiinnostus toistoon nopeasti."},
+ {id:"laatikko",t:"Pahvilaatikkoaarre",ty:"nena",m:10,e:1,p:"box",g:"Pahvilaatikko, vessapaperirullia, rypistettyä paperia",
+  s:["Täytä laatikko paperilla ja rullilla.","Piilota nappuloita sekaan.","Anna koiran repiä vapaasti.","Siivoa jäljet heti, kun hän on valmis."],
+  tip:"Valvo. Jos hän alkaa syödä pahvia, lopeta – vatsa ei tarvitse paperikuitua."},
+ {id:"pyyhe",t:"Pyyhekääryle",ty:"nena",m:5,e:1,p:"towel",g:"Vanha pyyhe, nappuloita",
+  s:["Levitä pyyhe ja ripottele nappulat.","Rullaa tiukaksi, solmi halutessasi löysälle solmulle.","Anna koiralle avattavaksi."],
+  tip:"Rullaa kolme valmiiksi kerralla. Väsyneenä vain ojennat valmiin."},
+ {id:"muffini",t:"Muffinivuoka",ty:"nena",m:5,e:1,p:"muffin",g:"Muffinivuoka, tennispallot tai pikkulelut",
+  s:["Nappula osaan koloista.","Pallo jokaisen kolon päälle.","Koira nostaa pallot pois ja etsii nappulat."],
+  tip:"Isot kolot sopivat isolle kuonolle. Vaikeuta lisäämällä tyhjiä koloja."},
+ {id:"piilo",t:"Piilosta",ty:"nena",m:10,e:2,p:"person",g:"Toinen ihminen",
+  s:["Toinen pitää koiraa, tai koira odottaa paikalla.","Piiloudu toiseen huoneeseen.","Kutsu kerran nimellä.","Kun hän löytää, iso palkka."],
+  tip:"Hyvä yhteistyöleikki koko perheelle. Piilot vaikeutuvat vähitellen."},
+ {id:"nimi",t:"Tuo nimetty lelu",ty:"paa",m:10,e:2,p:"toys",g:"2–3 erilaista lelua",
+  s:["Aloita yhdellä lelulla: sano nimi, palkitse kun koira koskee.","Lisää toinen lelu lattialle.","Pyydä nimellä, palkitse vain oikeasta.","Vaihda lelujen paikkoja."],
+  tip:"Viikkojen projekti. 5 minuuttia kerrallaan, ei enempää."},
+ {id:"kosketus",t:"Nenä kämmeneen",ty:"paa",m:5,e:1,p:"hand",g:"Nappuloita",
+  s:["Ojenna kämmen kuonon eteen.","Kun koira koskettaa, sano ”jes” ja palkitse.","Siirrä kättä kauemmas, ylös ja alas.","Lisää sana ”Kosketa”."],
+  tip:"Hyödyllinen arjessa: ohjaat koiraa ilman taluttimen kiskomista."},
+ {id:"peruutus",t:"Peruutus",ty:"paa",m:5,e:2,p:"backup",g:"Kapea käytävä tai sohvan ja seinän väli",
+  s:["Seiso koiran edessä käytävässä.","Astu askel koiraa kohti.","Kun koira astuu taaksepäin, palkitse.","Vähitellen useampi askel ennen palkkaa."],
+  tip:"Opettaa takajalkojen hallintaa. Hyvä ikääntyvälle isolle koiralle."},
+ {id:"alusta",t:"Etutassut alustalle",ty:"paa",m:5,e:2,p:"platform",g:"Matala, tukeva ja liukumaton alusta",
+  s:["Houkuttele etutassut alustalle ja palkitse.","Siirrä nappulaa sivulle, niin takapää kiertää.","Muutama askel kumpaankin suuntaan."],
+  tip:"Alustan oltava pitävä. Liukas pinta on nivelille riski."},
+ {id:"odota",t:"Odota ja jätä",ty:"paa",m:5,e:1,p:"wait",g:"Nappuloita",
+  s:["Nappula lattialle, kämmen sen päälle.","Kun koira lakkaa yrittämästä, palkitse toisesta kädestä.","Pidennä odotusta vähitellen.","Vapauta sanalla ”Ota”."],
+  tip:"Paras juuri ennen ruokaa, kun motivaatio on korkeimmillaan."},
+ {id:"nuolu",t:"Nuolumatto",ty:"rauha",m:15,e:1,p:"lick",g:"Nuolumatto, liotettuja nappuloita",
+  s:["Liota osa päivän nappuloista vedessä pehmeiksi.","Levitä matolle ja painele uriin.","Pakasta, jos haluat pidemmän keston.","Anna rauhallisessa paikassa."],
+  tip:"Nuoleminen rauhoittaa. Hyvä iltaan ja vieraiden ajaksi."},
+ {id:"kong",t:"Jäädytetty Kong",ty:"rauha",m:20,e:1,p:"kong",g:"Kong tai vastaava, liotettuja nappuloita",
+  s:["Täytä Kong liotetuilla nappuloilla.","Pakasta yön yli.","Anna, kun tarvitset rauhallisen hetken."],
+  tip:"Tee viikonloppuna 3–4 valmiiksi pakkaseen. Väsyneen pelastus."},
+ {id:"paikka",t:"Rauhoittuminen petille",ty:"rauha",m:10,e:1,p:"bed",g:"Peti tai matto, nappuloita",
+  s:["Istu sohvalle, peti viereen.","Palkitse hiljaa aina, kun koira menee makaamaan petille.","Palkitse rauhallisuudesta: pää maahan, huokaus.","Ei käskyjä, ei innostusta."],
+  tip:"Aktivoinnin tärkein vastapaino. Rauhoittumaan osaava koira ei tarvitse jatkuvaa viihdytystä."},
+ {id:"veto",t:"Vetoleikki säännöillä",ty:"leikki",m:5,e:2,p:"tug",g:"Pitkä vetolelu",
+  s:["Leikki alkaa luvalla: ”Ota”.","Vedä sivuttain, ei ylöspäin.","Sano ”Irti” ja pidä lelu paikallaan.","Kun koira päästää, palkitse jatkamalla leikkiä."],
+  tip:"Lopeta ennen kuin kierrokset nousevat. Ei illalla."},
+ {id:"polku",t:"Nappulapolku",ty:"nena",m:10,e:2,p:"trail",g:"Nappuloita",
+  s:["Koira odottaa toisessa huoneessa.","Pudota nappula metrin välein huoneesta toiseen.","Polun päähän pieni kasa.","Päästä koira alkuun ja anna hänen seurata itse."],
+  tip:"Pidennä polkua ja harvenna nappuloita, kun hän oppii seuraamaan hajua."},
+ {id:"kasi",t:"Kummassa kädessä?",ty:"nena",m:5,e:1,p:"hand",g:"Nappuloita",
+  s:["Nappula toiseen nyrkkiin koiran näkemättä.","Ojenna molemmat nyrkit.","Kun koira nuuhkii oikeaa, avaa ja anna.","Väärästä: avaa tyhjä käsi rauhallisesti, uusi kierros."],
+  tip:"Sopii sohvalta tehtäväksi. Jos hän tassuttaa kovaa, palkitse vain nuuhkaisusta."},
+ {id:"kenno",t:"Munakenno",ty:"nena",m:5,e:1,p:"carton",g:"Pahvinen munakenno, nappuloita",
+  s:["Nappula osaan koloista.","Sulje kansi.","Anna koiran avata ja repiä.","Kerää pahvinpalat pois."],
+  tip:"Sama sääntö kuin laatikossa: lopeta, jos pahvia alkaa mennä alas."},
+ {id:"pallo",t:"Ateria ruokapallosta",ty:"nena",m:15,e:1,p:"ball",g:"Ruokapallo tai -lelu, aterian nappulat",
+  s:["Mittaa ateria palloon.","Anna lattialla, jossa pallo saa vieriä.","Kerää pallo pois tyhjänä."],
+  tip:"Helpoin tapa lisätä aktivointia arkeen ilman lisätyötä. Siirrä tähän osa aamuateriasta."},
+ {id:"leuka",t:"Leuka käteen",ty:"rauha",m:5,e:1,p:"hand",g:"Nappuloita",
+  s:["Istu, kämmen auki koiran leuan alla.","Kun leuka laskeutuu käteen, palkitse.","Pidennä aikaa sekunti kerrallaan.","Lisää kevyt kosketus korvaan tai tassuun."],
+  tip:"Koira antaa itse luvan käsittelyyn. Helpottaa eläinlääkäriä, kynsien leikkuuta ja korvien putsausta."},
+ {id:"pyori",t:"Pyöri",ty:"paa",m:5,e:1,p:"spin",g:"Nappuloita",
+  s:["Nappula kuonon edessä, ohjaa hitaasti iso ympyrä.","Palkitse, kun kierros on valmis.","Opeta kumpaankin suuntaan eri sanalla.","Vähennä käden liikettä vähitellen."],
+  tip:"Isot, rauhalliset ympyrät. Ei vauhtia liukkaalla lattialla."},
+ {id:"laatikkoon",t:"Tassut laatikkoon",ty:"paa",m:5,e:2,p:"box",g:"Matala, tukeva laatikko tai kori",
+  s:["Laatikko lattialle. Älä houkuttele, odota.","Palkitse jokaisesta katseesta ja askelesta laatikkoa kohti.","Sitten vain tassusta laatikossa, sitten kahdesta.","Tavoite: kaikki neljä tassua sisään."],
+  tip:"Kun et ohjaa, koiran on keksittävä itse. Väsyttää enemmän kuin näyttää."},
+ {id:"siivous",t:"Lelut laatikkoon",ty:"paa",m:10,e:2,p:"box",g:"Lelulaatikko, pari lelua",
+  s:["Opeta ensin ”Tuo” yhdellä lelulla.","Pidä kättä laatikon yllä, niin lelu putoaa sinne.","Palkitse, kun lelu osuu laatikkoon.","Lisää leluja yksi kerrallaan."],
+  tip:"Pitkä projekti. Vaatii, että ”Tuo” ja ”Irti” sujuvat jo."},
+ {id:"harjaus",t:"Rauhallinen harjaus",ty:"rauha",m:10,e:1,p:"brush",g:"Kumiharja tai -hanska",
+  s:["Koira makaa petillä.","Harjaa hitaasti karvan suuntaan pitkin vedoin.","Tauko, jos hän nousee. Jatka, kun hän asettuu.","Lopeta ennen kuin hän kyllästyy."],
+  tip:"Hyvä iltaan. Samalla huomaat iho- ja kyhmymuutokset ajoissa."},
+ {id:"nouto",t:"Kevyt nouto matolla",ty:"leikki",m:5,e:1,p:"toys",g:"Pehmolelu, pitkä matto tai käytävä",
+  s:["Heitä lelu matalalla 2–3 metriä maton päälle.","Kun koira tuo, vaihda nappulaan tai uuteen heittoon.","5–8 heittoa, sitten lopeta."],
+  tip:"Matto pitää tassut pitävällä pinnalla. Ei heittoja liukkaalla lattialla eikä portaisiin."}
+];
+
+function dog(){return `<g>
+<path d="M36 52 Q20 50 17 67" fill="none" stroke="var(--dog)" stroke-width="5" stroke-linecap="round"/>
+<rect x="40" y="62" width="6" height="26" rx="3" fill="var(--ridge)"/><rect x="82" y="62" width="6" height="26" rx="3" fill="var(--ridge)"/>
+<rect x="34" y="44" width="58" height="24" rx="12" fill="var(--dog)"/>
+<rect x="50" y="62" width="6" height="26" rx="3" fill="var(--dog)"/><rect x="90" y="62" width="6" height="26" rx="3" fill="var(--dog)"/>
+<ellipse cx="88" cy="55" rx="10" ry="13" fill="var(--dog)"/>
+<path d="M82 52 L95 29 L106 35 L97 58 Z" fill="var(--dog)"/>
+<ellipse cx="104" cy="32" rx="10" ry="8" fill="var(--dog)"/>
+<rect x="105" y="30" width="15" height="9" rx="4.5" fill="var(--dog)"/>
+<circle cx="120" cy="33.5" r="2.4" fill="var(--ink)"/>
+<path d="M98 26 Q93 34 99 41 Q104 33 102 26 Z" fill="var(--ridge)"/>
+<circle cx="107.5" cy="29" r="1.5" fill="var(--ink)"/>
+<path d="M48 45.5 L78 45.5" stroke="var(--ridge)" stroke-width="3.2" stroke-linecap="round"/>
+</g>`}
+const P={
+ scatter:`<g fill="var(--accent)"><circle cx="128" cy="86" r="2.5"/><circle cx="140" cy="84" r="2.5"/><circle cx="150" cy="87" r="2.5"/><circle cx="12" cy="86" r="2.5"/><circle cx="133" cy="78" r="2.5"/></g>`,
+ cups:`<g fill="var(--prop)"><path d="M124 88 L126 74 L136 74 L138 88Z"/><path d="M140 88 L142 74 L152 74 L154 88Z"/><path d="M132 72 L134 58 L144 58 L146 72Z" opacity=".55"/></g><circle cx="139" cy="84" r="2.5" fill="var(--accent)"/>`,
+ box:`<g fill="var(--prop)"><rect x="122" y="66" width="34" height="22" rx="2"/><path d="M122 66 L114 58 L130 60Z M156 66 L162 56 L146 60Z"/></g><g fill="var(--surface)"><circle cx="132" cy="64" r="4"/><circle cx="143" cy="62" r="5"/></g>`,
+ towel:`<g><rect x="122" y="74" width="34" height="14" rx="7" fill="var(--prop)"/><path d="M128 81 Q139 76 150 81" stroke="var(--surface)" stroke-width="2" fill="none"/></g>`,
+ muffin:`<g><rect x="120" y="76" width="38" height="12" rx="3" fill="var(--prop)"/><g fill="#E3E36A" stroke="var(--ink)" stroke-width=".8"><circle cx="128" cy="74" r="5"/><circle cx="150" cy="74" r="5"/></g><circle cx="139" cy="78" r="2.5" fill="var(--accent)"/></g>`,
+ person:`<g><rect x="132" y="22" width="24" height="66" rx="2" fill="none" stroke="var(--prop)" stroke-width="3"/><circle cx="150" cy="40" r="5" fill="var(--prop)"/><rect x="146" y="46" width="8" height="24" rx="4" fill="var(--prop)"/></g>`,
+ toys:`<g><circle cx="132" cy="82" r="6" fill="var(--accent)"/><circle cx="150" cy="82" r="6" fill="none" stroke="var(--prop)" stroke-width="3.5"/><rect x="124" y="64" width="22" height="6" rx="3" fill="var(--prop)"/></g>`,
+ hand:`<g fill="var(--prop)"><rect x="124" y="26" width="14" height="18" rx="6"/><rect x="134" y="28" width="16" height="5" rx="2.5"/><rect x="134" y="35" width="17" height="5" rx="2.5"/><rect x="138" y="42" width="14" height="22" rx="4"/></g>`,
+ backup:`<g stroke="var(--prop)" stroke-width="3" fill="none" stroke-linecap="round"><path d="M28 30 L6 30 M12 24 L6 30 L12 36"/></g><rect x="126" y="40" width="12" height="48" rx="6" fill="var(--prop)"/><circle cx="132" cy="32" r="7" fill="var(--prop)"/>`,
+ platform:`<g><rect x="76" y="80" width="40" height="8" rx="2" fill="var(--prop)"/><path d="M42 24 Q60 10 78 22" stroke="var(--prop)" stroke-width="2.5" fill="none"/><path d="M78 22 L72 20 M78 22 L76 16" stroke="var(--prop)" stroke-width="2.5"/></g>`,
+ wait:`<g><circle cx="134" cy="86" r="2.5" fill="var(--accent)"/><path d="M124 84 Q134 70 146 84" fill="var(--prop)"/><rect x="148" y="40" width="6" height="40" rx="3" fill="var(--prop)" opacity=".5"/></g>`,
+ lick:`<g><rect x="120" y="80" width="38" height="8" rx="3" fill="var(--prop)"/><g stroke="var(--surface)" stroke-width="1.5"><path d="M126 84 L152 84"/></g></g>`,
+ kong:`<g fill="var(--prop)"><ellipse cx="140" cy="82" rx="11" ry="7"/><ellipse cx="140" cy="70" rx="8" ry="6"/><ellipse cx="140" cy="61" rx="5" ry="4"/></g><g fill="#BFE0F0"><circle cx="133" cy="54" r="2"/><circle cx="148" cy="57" r="1.6"/></g>`,
+ bed:`<g><ellipse cx="64" cy="88" rx="56" ry="7" fill="var(--prop)" opacity=".55"/><g fill="var(--accent)" opacity=".8"><text x="126" y="34" font-size="16" font-family="sans-serif">z</text><text x="138" y="22" font-size="12" font-family="sans-serif">z</text></g></g>`,
+ tug:`<g><path d="M120 37 Q132 46 144 40" stroke="var(--accent)" stroke-width="4" fill="none" stroke-linecap="round"/><rect x="142" y="34" width="12" height="11" rx="5" fill="var(--prop)"/><rect x="146" y="44" width="7" height="40" rx="3.5" fill="var(--prop)" opacity=".55"/></g>`,
+ trail:`<g fill="var(--accent)"><circle cx="6" cy="86" r="2"/><circle cx="124" cy="86" r="2"/><circle cx="134" cy="86" r="2"/><circle cx="146" cy="86" r="2.5"/><circle cx="150" cy="82.5" r="2.5"/><circle cx="154" cy="86" r="2.5"/><circle cx="150" cy="86.5" r="2.5"/></g>`,
+ carton:`<g><rect x="120" y="78" width="38" height="10" rx="2" fill="var(--prop)"/><g fill="var(--surface)"><circle cx="127" cy="81" r="3"/><circle cx="135" cy="81" r="3"/><circle cx="143" cy="81" r="3"/><circle cx="151" cy="81" r="3"/></g><circle cx="135" cy="81" r="1.5" fill="var(--accent)"/></g>`,
+ ball:`<g><circle cx="140" cy="79" r="9" fill="var(--prop)"/><circle cx="140" cy="79" r="2.5" fill="var(--surface)"/><circle cx="153" cy="86" r="2" fill="var(--accent)"/></g>`,
+ spin:`<path d="M50 22 A26 9 0 1 0 90 20" fill="none" stroke="var(--prop)" stroke-width="2.5" stroke-linecap="round"/><path d="M90 20 L84 17 M90 20 L85 25" stroke="var(--prop)" stroke-width="2.5" stroke-linecap="round"/>`,
+ brush:`<g><rect x="66" y="28" width="24" height="7" rx="3" fill="var(--prop)"/><g stroke="var(--prop)" stroke-width="1.5"><path d="M69 36 L69 41 M74 36 L74 41 M79 36 L79 41 M84 36 L84 41 M88 36 L88 41"/></g></g>`
+};
+function art(a){
+  const back = a.p==="bed" ? P.bed : "";
+  const front = a.p==="bed" ? "" : P[a.p];
+  return `<svg class="art" viewBox="0 0 164 96" role="img" aria-label="${a.t}">${back}<line x1="0" y1="88.5" x2="164" y2="88.5" stroke="var(--line)" stroke-width="1"/>${dog()}${front}</svg>`;
+}
+
+let st={time:99,type:"all",tired:false};
+function load(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
+function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+st=Object.assign(st,load("akt-filters",{}));
+
+function filtered(){return A.filter(a=>a.m<=st.time&&(st.type==="all"||a.ty===st.type)&&(!st.tired||a.e===1))}
+function card(a){
+  return `<article class="card" id="c-${a.id}">${art(a)}<div class="card-body">
+  <h3>${a.t}</h3>
+  <div class="meta"><span class="tag">${T[a.ty]}</span><span class="tag">${a.m} min</span>${a.e===1?'<span class="tag easy">Helppo sinulle</span>':''}</div>
+  <p class="gear">${a.g}</p>
+  <details><summary>Näin teet</summary><ol>${a.s.map(x=>`<li>${x}</li>`).join("")}</ol><p class="tip">${a.tip}</p></details>
+  </div></article>`;
+}
+function render(){
+  const f=filtered();
+  document.getElementById("list").innerHTML = f.length ? f.map(card).join("") :
+    `<p class="empty">Näillä valinnoilla ei löydy tehtävää. Valitse pidempi aika tai toinen tyyppi.</p>`;
+  document.getElementById("count").textContent = `${f.length} tehtävää sopii valintoihin`;
+  ["time","type"].forEach(g=>document.querySelectorAll(`#${g} .chip`).forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.v===String(st[g])))));
+  document.getElementById("tired").checked=st.tired;
+  document.getElementById("go").disabled=!f.length;
+}
+document.querySelectorAll("#time .chip").forEach(b=>b.onclick=()=>{st.time=+b.dataset.v;save("akt-filters",st);render()});
+document.querySelectorAll("#type .chip").forEach(b=>b.onclick=()=>{st.type=b.dataset.v;save("akt-filters",st);render()});
+document.getElementById("tired").onchange=e=>{st.tired=e.target.checked;save("akt-filters",st);render()};
+document.getElementById("go").onclick=()=>{
+  const f=filtered(); if(!f.length) return;
+  const recent=load("akt-recent",[]);
+  let pool=f.filter(a=>!recent.includes(a.id)); if(!pool.length) pool=f;
+  const a=pool[Math.floor(Math.random()*pool.length)];
+  save("akt-recent",[a.id,...recent.filter(x=>x!==a.id)].slice(0,4));
+  render();
+  const el=document.getElementById("c-"+a.id);
+  el.classList.add("hit"); el.querySelector("details").open=true;
+  const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  el.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});
+};
+render();
+</script>
+</body>
+</html>
