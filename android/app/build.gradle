@@ -1,0 +1,35 @@
+plugins { id 'com.android.application' }
+
+def appUrl = project.findProperty('appUrl') ?: 'https://example.github.io/aktivoinnit/'
+def vCode = (project.findProperty('versionCode') ?: '1').toString().toInteger()
+
+android {
+    namespace 'fi.koti.aktivoinnit'
+    compileSdk 34
+    defaultConfig {
+        applicationId 'fi.koti.aktivoinnit'
+        minSdk 24
+        targetSdk 34
+        versionCode vCode
+        versionName "1.${vCode}"
+        resValue 'string', 'app_url', appUrl
+    }
+    signingConfigs {
+        release {
+            storeFile file(System.getenv('KEYSTORE_FILE') ?: 'release.jks')
+            storePassword System.getenv('KEYSTORE_PASS')
+            keyAlias 'aktivoinnit'
+            keyPassword System.getenv('KEYSTORE_PASS')
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
