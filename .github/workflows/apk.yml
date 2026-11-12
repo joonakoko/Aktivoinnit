@@ -1,0 +1,52 @@
+name: Rakenna APK
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'android/**'
+      - '.github/workflows/apk.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Valmistele
+        env:
+          KEYSTORE_B64: ${{ secrets.KEYSTORE_B64 }}
+        run: |
+          if [ -z "$KEYSTORE_B64" ]; then echo "::error::Salaisuus KEYSTORE_B64 puuttuu (Settings > Secrets and variables > Actions)"; exit 1; fi
+          echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/release.jks"
+          mkdir -p android/app/src/main/assets
+          cp index.html android/app/src/main/assets/index.html
+          OWNER="${{ github.repository_owner }}"
+          echo "APP_URL=https://${OWNER,,}.github.io/${{ github.event.repository.name }}/" >> "$GITHUB_ENV"
+
+      - name: Käännä
+        env:
+          KEYSTORE_FILE: ${{ runner.temp }}/release.jks
+          KEYSTORE_PASS: ${{ secrets.KEYSTORE_PASS }}
+        run: gradle -p android assembleRelease -PappUrl="$APP_URL" -PversionCode=${{ github.run_number }}
+
+      - run: cp android/app/build/outputs/apk/release/app-release.apk aktivoinnit.apk
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ github.run_number }}
+          name: Aktivoinnit ${{ github.run_number }}
+          files: aktivoinnit.apk
+          make_latest: true
